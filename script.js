@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if user is logged in
     if(getCookie('email') == null || getLocalStorage('email') == null){
         alert("You are not logged in!");
-        window.location.href = "/login.html";
+        window.location.href = "/JSTraining1/login.html";
     }
     if(getLocalStorage('theme') == "Dark Mode"){
         body.classList.toggle("dark-theme")
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         deleteLocalStorage('email');
         alert("Logging out...");
 
-        window.location.href = "/login.html"; // Redirect to login page
+        window.location.href = "/JSTraining1/login.html"; // Redirect to login page
     });
 });
 
