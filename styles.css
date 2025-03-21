@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+.light-theme {
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* Navbar Light Mode */
+.light-theme .navbar {
+    background: #004792;
+    color: white;
+}
+
+/* Navbar Dark Mode */
+.dark-theme .navbar {
+    background: #030303;
+    color: white;
+}
+
+/* Loader Styles */
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    display:flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #007bff;
+    color: white;
+}
+
+.nav-buttons button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#toggle-theme {
+    background: #fff;
+    color: #007bff;
+    border-radius: 5px;
+}
+
+#logout {
+    background: red;
+    color: white;
+    border-radius: 5px;
+}
+
+/* User Container */
+.user-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* User Card */
+.user-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.dark-theme .user-card {
+    background: #333;
+    color: white;
+}
+
+.user-card h3 {
+    margin: 0;
+}
+
+.user-card p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Button Hover */
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* loader */
+  
+  .scene {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 220px;
+    width: 220px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .cube-wrapper {
+    transform-style: preserve-3d;
+    animation: bouncing 2s infinite;
+  }
+  
+  .cube {
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateZ(45deg);
+    animation: rotation 2s infinite;
+  }
+  
+  .cube-faces {
+    transform-style: preserve-3d;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: translateX(0) translateY(0) translateZ(-40px);
+  }
+  
+  .cube-face {
+    position: absolute;
+    inset: 0;
+    background: #110d31ff;
+    border: solid 1px #ff8484ff;
+  }
+  .cube-face.shadow {
+    transform: translateZ(-80px);
+    animation: bouncing-shadow 2s infinite;
+  }
+  .cube-face.top {
+    transform: translateZ(80px);
+  }
+  .cube-face.front {
+    transform-origin: 0 50%;
+    transform: rotateY(-90deg);
+  }
+  .cube-face.back {
+    transform-origin: 0 50%;
+    transform: rotateY(-90deg) translateZ(-80px);
+  }
+  .cube-face.right {
+    transform-origin: 50% 0;
+    transform: rotateX(-90deg) translateY(-80px);
+  }
+  .cube-face.left {
+    transform-origin: 50% 0;
+    transform: rotateX(-90deg) translateY(-80px) translateZ(80px);
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotateX(45deg) rotateY(0) rotateZ(45deg);
+      animation-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+    }
+    50% {
+      transform: rotateX(45deg) rotateY(0) rotateZ(225deg);
+      animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+    }
+    100% {
+      transform: rotateX(45deg) rotateY(0) rotateZ(405deg);
+      animation-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+    }
+  }
+  @keyframes bouncing {
+    0% {
+      transform: translateY(-40px);
+      animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+    }
+    45% {
+      transform: translateY(40px);
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    100% {
+      transform: translateY(-40px);
+      animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+    }
+  }
+  @keyframes bouncing-shadow {
+    0% {
+      transform: translateZ(-80px) scale(1.3);
+      animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+      opacity: 0.05;
+    }
+    45% {
+      transform: translateZ(0);
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateZ(-80px) scale(1.3);
+      animation-timing-function: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+      opacity: 0.05;
+    }
+  }

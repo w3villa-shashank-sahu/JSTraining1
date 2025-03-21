@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>User Dashboard</h2>
+        <div class="nav-buttons">
+            <button id="toggle-theme">Dark Mode</button>
+            <button id="logout">Logout</button>
+        </div>
+    </nav>
+
+    <!-- loader -->
+    <div class="scene" id="loader">
+        <div class="cube-wrapper">
+          <div class="cube">
+            <div class="cube-faces">
+              <div class="cube-face shadow"></div>
+              <div class="cube-face bottom"></div>
+              <div class="cube-face top"></div>
+              <div class="cube-face left"></div>
+              <div class="cube-face right"></div>
+              <div class="cube-face back"></div>
+              <div class="cube-face front"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- User Cards Container -->
+    <div class="user-container">
+        <!-- Users will be dynamically added here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
