@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     if(getLocalStorage('email') != null)
-        window.location.assign('/index.html');
+        window.location.assign('/JSTraining1/index.html');
         
         
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // form.submit(); // Submit the form if validation passes
         saveLocalStorage('email', email);
         saveCookie('email', email);
-        window.location.assign('/index.html');
+        window.location.assign('/JSTraining1/index.html');
         
     });
 });
